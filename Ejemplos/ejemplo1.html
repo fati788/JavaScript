@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        alert("Hola Mundo");
+        document.write("Hola Mundo");
+        console.log("Hola Mundo");
+        let nombre = prompt("¿Cual es tu nombre?");
+        alert("Hola " + nombre);
+        console.log("Hola " + nombre);
+        document.write("<h1>Hola " + nombre + "</h1>");
+        let num1 = parseInt(prompt("Dame un numero"));
+        let num2 = parseInt(prompt("Dame otro numero"));
+        let suma = num1 + num2;
+        document.write("<h2>La suma es: " + suma + "</h2>");
+        let numeros = [1, 2, 3, 4, 5];
+        console.log(numeros);
+        document.write("<h3> el array es:" + numeros[1] + "</h3>");
+        for (let i = 0; i < numeros.length; i++) {
+            document.write("<h4> el numero de la posision " + i + " es: " + numeros[i] + "</h4>");
+        }
+        document.write("<h1> Sin usar el for </h1>");
+       document.write("<h4> los numros son:" + numeros + "</h4>");
+</script>
+    <p id="primero"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat praesentium corporis, dicta
+        incidunt accusamus sequi minus! Mollitia magni odio distinctio. Et cum eligendi cumque mollitia aliquid fugit
+        ipsam minima maiores.</p>
+          <script>
+                   let texto = prompt("Dame un texto");
+       document.getElementById("primero").innerHTML = texto;
+    
+          </script>
+</body>
+
+</html>
