@@ -3,26 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 12</title>
 </head>
 <body>
     <script>
-        /*Hacer una página JavaScript que pida un numero por teclado
-y realice una pirámide con hasta el numero que hemos leído por teclado. NOTA:
-solo está permitido el uso de un * en todo el código
-Ejemplo: si el numero leído es 6
-*
-**
-***
-****
-*****
-*******/
-let num = parseInt(prompt("Dame un numero"));
-let fila = "*";
-for(let i=1; i<=num; i++){
-    document.write("<h2>" + fila + "</h2>");
-    fila += "*";
-}   
+let numero = parseInt(prompt("Dame un numero"))
+let fila = "*"
+for(let i = 1 ; i<= numero; i++){
+  document.write(fila + "<br>");
+  fila = fila + "*" ;
+}
+
 
     </script>
 </body>
