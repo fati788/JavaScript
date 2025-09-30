@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 26</title>
+</head>
+<body>
+    
+    <script>
+/*con while Hacer un programa que vaya pidiendo caracteres por teclado hasta leer
+un *, una vez leído dicho * mostrará por pantalla el numero total de vocales que
+aparecen en el texto leído
+Ej.
+Dame un carácter: a
+Dame un carácter: b
+Dame un carácter: u
+Dame un carácter: s
+Dame un carácter: o
+Dame un carácter: n
+Dame un carácter: *
+-------------------
+Has introducido: 3 vocales.*/
+let caracter;
+let contadorVocales = 0;
+let vocales = "aeiouAEIOU"
+do {
+    caracter = prompt("Dame un carácter:");
+    if (vocales.includes(caracter)) {
+        contadorVocales++;
+    }
+} while (caracter != '*');
+  document.write("Has introducido: " + contadorVocales + " vocales.");
+    </script>
+</body>
+</html>

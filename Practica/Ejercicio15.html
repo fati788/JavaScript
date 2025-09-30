@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 15</title>
 </head>
+
 <body>
     <script>
-/*Hacer una página JavaScript que pida un numero n por teclado y muestre
-los n primeros términos de la sucesión de Fibonacci.
-NOTA: la sucesión de Fibonacci se caracteriza por:
-Primer elemento: 0
-Segundo elemento: 1
-Resto elementos: se forman sumando los 2 términos anteriores
-0,1,1,2,3,5*/
-let numero = parseInt(prompt("Dame un numero"))
-let a = 0;
-let b = 1;
-let siguiente;
-document.write(a + ", " + b + ", ")
-for(let i = 3 ; i<=numero ; i++){
-    siguiente = a + b;
-    document.write(siguiente + ", ")
-    a = b;
-    b = siguiente;
-}
+        /*Hacer una página JavaScript que pida un numero n por teclado y muestre
+        los n primeros términos de la sucesión de Fibonacci.
+        NOTA: la sucesión de Fibonacci se caracteriza por:
+        Primer elemento: 0
+        Segundo elemento: 1
+        Resto elementos: se forman sumando los 2 términos anteriores
+        0,1,1,2,3,5*/
+        
+        let numero = parseInt(prompt("Dame un numero"))
+        let a = 0;
+        let b = 1;
+        let siguiente;
+        document.write(a + ", " + b + ", ")
+        for (let i = 3; i <= numero; i++) {
+            siguiente = a + b;
+            document.write(siguiente + ", ")
+            a = b;
+            b = siguiente;
+        }
 
 
 
 
     </script>
 </body>
+
 </html>

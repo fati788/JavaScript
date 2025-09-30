@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .amarillo {
+            background-color: yellow;
+            color: red;
+            border: 1px solid black;
+        }
+
+        .rojo {
+            background-color: red;
+            color: white;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="parrafo1">lorem insnn</p>
+    <p id="parrafo2">lorem insnn</p>
+    <script>
+
+        document.getElementById("parrafo1").className = "amarillo";
+        document.getElementById("parrafo2").className = "rojo";
+
+
+        function meterTexto() {
+            let texto = prompt("Ingrese un texto:");
+            document.getElementById("parrafo1").innerHTML = texto.toLocaleUpperCase();
+        }
+        meterTexto();
+
+        function meterTexto2(id , texto) {
+            document.getElementById(id).innerHTML = texto;
+        }
+        meterTexto2("parrafo2", "Hola Mundo");
+
+    </script>
+</body>
+
+</html>

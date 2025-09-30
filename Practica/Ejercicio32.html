@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 32</title>
+</head>
+<body>
+    
+    <script>
+    function piramide(caracter , numero){
+        let fila = "";
+
+        for(let i = 1; i <= numero; i++){
+            fila += caracter;
+            document.write(fila + "<br>");
+        }
+
+    }
+
+    let caracter = prompt("Dame un caracter: ");
+    let numero = parseInt(prompt("Dame un numero: "));
+
+    piramide(caracter, numero);
+   document.write("-------------------- <br>");
+   function piramideInvertida(caracter , numero){
+        let fila = "";
+
+        for(let i = 1; i <= numero; i++){
+            fila += caracter;
+        }
+        for(let j = numero; j >= 1; j--){
+            document.write(fila.substring(0,j) + "<br>");
+        }
+
+    }
+    
+    piramideInvertida(caracter, numero);
+
+    </script>
+</body>
+</html>
