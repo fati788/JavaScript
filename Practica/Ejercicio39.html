@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 39 </title>
+</head>
+
+<body>
+
+    <script>
+        /*Un número perfecto es aquel en el que la suma de todos sus divisores,
+        sin incluirlo a él mismo da como resultado ese número.
+        Por ejemplo, el número 6 es perfecto ya que los divisores de 6: 1, 2 y 3 (sin
+        contar el 6) sumados dan 6. Hacer una función que lea un número y diga si es o
+        no perfecto*/
+
+        function esPerfecto(numero) {
+
+            let perfecto = true;
+            let sumdiv = 0;
+
+            for (let i = 1; i < numero; i++) {
+                if (numero % i == 0) {
+                    sumdiv += i;
+                }
+            }
+            if (sumdiv == numero) {
+
+                document.write("El numero es perfecto");
+                return true;
+            } else {
+
+                document.write("El numero no es perfecto<<<<<");
+                return false;
+            }
+        }
+
+        esPerfecto(parseInt(prompt("Dame un numero: ")))
+
+    </script>
+
+</body>
+
+</html>

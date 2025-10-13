@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function esPrimo(num){
+            let i = 2;
+          
+            while(i<num){
+                if(num % i == 0){
+                    return false;
+                }
+                 i++;
+            }
+           
+            return true;
+        }
+        let numero = parseInt(prompt("Dame un numero"));
+
+        if(esPrimo(numero)){
+            document.write("El numero es primo");
+        }else{
+            document.write("El numero no es primo");
+        }
+    </script>
+</body>
+</html>

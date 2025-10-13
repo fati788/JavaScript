@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 36</title>
+</head>
+<body>
+    <script>
+
+        /*Hacer una función que vaya pidiendo caracteres por pantalla hasta leer
+un *, una vez leído el * mostrará por pantalla las vocales que han sido leídas
+(a, e, i, o, u)*/ 
+function numeroVocales(){
+
+    let caracter ;
+    let vocales = "aeiouAEIOU";
+      let numVoc = 0;
+      
+    do{
+        caracter = prompt("Dame un caracter");
+        if(vocales.includes(caracter)){
+            numVoc++;
+        }
+      
+    }while(caracter != "*")
+
+    document.write("El numero de los vocales es: " + numVoc);
+}
+
+numeroVocales();
+    </script>
+</body>
+</html>

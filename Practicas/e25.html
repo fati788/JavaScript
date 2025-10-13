@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let producto = 1;
+        let numero;
+        do{
+            numero = parseInt(prompt("Dame un numero"));
+            if(numero != 9999){
+                producto *= numero;
+            }
+        }while(numero != 9999);
+
+        document.write("El producto de los numeros es: " + producto);
+    </script>
+</body>
+</html>

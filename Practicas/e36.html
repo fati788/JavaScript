@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function numVocales(){
+            let caracter;
+            let cont=0;
+            let volcales = "aeuioAEUIO";
+
+            do{
+                caracter = prompt("Dime un caracter");
+                if(volcales.includes(caracter)){
+                    cont++;
+                }
+            
+            }while(caracter != "*");
+        document.write("Has introducido: " + cont + " Vocales");
+        }
+
+        numVocales();
+    </script>
+</body>
+</html>

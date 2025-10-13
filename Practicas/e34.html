@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function area(){
+            let forma = parseInt(prompt("Dame el numero de la forma quieres calcaular la area 1.tiangulo o 2.circulo o 3.rectangulo"));
+            if(forma == 1){
+                let base = parseFloat(prompt("Dime el valor de base"));
+                let altura = parseFloat(prompt("Dime el valor de el altura"));
+                document.write("El area es : " + ((base*altura)/2));
+
+            }else if(forma == 2){
+                let radio = parseFloat(prompt("Dime el velor de la radio"));
+                document.write("El area es: " + (Math.PI * radio*radio));
+
+            }else if(forma == 3){
+                let base = parseFloat(prompt("Dime el valor de base"));
+                let altura = parseFloat(prompt("Dime el valor de el altura"));
+                document.write("El area es : " + (base*altura));
+            }else{
+                document.write("Forma invalida");
+            } 
+        }
+        area();
+    </script>
+</body>
+</html>

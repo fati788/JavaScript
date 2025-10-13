@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 34</title>
+</head>
+<body>
+
+    <script>
+     /*Haz una función que sirva para calcular el área de un triángulo, el área
+de un rectángulo o el área de un círculo. Que nos pida por teclado cuál es la
+que queremos obtene*/
+
+function calcularArea(){
+
+    let tipo = prompt("Dime el forma que te quieres calcular el area ");
+    let area;
+    if(tipo === "triángulo"){
+        let base = parseFloat(prompt("Dime el valor de la base"));
+          let altura = parseFloat(prompt("Dime el valor de la altura"));
+          area = (base * altura)/2;
+          document.write("La valor de area de una triangulo de base " + base + " y de altura" + altura + " es: " + area);
+    }else if (tipo === "rectángulo" ){
+        let base = parseFloat(prompt("Dime el valor de la base"));
+          let altura = parseFloat(prompt("Dime el valor de la altura"));
+          area = (base * altura);
+          document.write("La valor de area de una rectangulo de base " + base + " y de altura" + altura + " es: " + area);
+    }else if (tipo === "círculo" ){
+        let radio = parseFloat(prompt("Dime el valor del radio"));
+        area = Math.PI*Math.pow(radio , 2);
+         document.write("La valor de area de una circulo de radio " + radio + " es: " + area);
+    }else{
+        document.write("Forma invalida")
+    }
+
+
+}
+  calcularArea();
+    </script>
+    
+</body>
+</html>

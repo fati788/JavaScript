@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let i = 1;
+        let contPar = 0;
+        let contImpar = 0;
+        while(i<= 20){
+            let numero = parseInt(prompt("Dame un numero "));
+            if (numero % 2 == 0){
+                contPar++;
+            }else{
+                contImpar++;
+            }
+
+            i++;
+        }
+
+        document.write("Has introducido: " + contPar + " numeros pares");
+        document.write("<br> Has introducido: " + contImpar + " numeros IMpares");
+    </script>
+</body>
+</html>

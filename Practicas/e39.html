@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function esPerfecto(numero){
+            let sum = 0;
+            for(let i= 1; i<numero ; i++){
+                if(numero%i == 0){
+                    sum += i;
+                }
+            }
+
+            if(sum == numero){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+
+        document.write(esPerfecto(parseInt(prompt("Dame un numero: "))));
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros</title>
+    <style>
+        .grandeGreen{
+            font-size: 30px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function par(numero) {
+            if (numero % 2 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        for (let i = 1; i <= 300; i++) {
+            if (par(i)) {
+             document.write("<span style='font-size: 20px ; color:#F00'>" + i + ", </span>");
+            }else if(i % 9 == 0){
+                document.write("<span style='font-size: 40px ; color:green'>" + i + ", </span>");
+            }else{
+            document.write(i + ", ")
+            }
+            if (i % 10 == 0) {
+                document.write("<br>")
+            }
+        }
+        //isNANnumber
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 38</title>
+</head>
+
+<body>
+    <script>
+        /*Hacer una función JavaScript que muestre los n (n será introducido por
+    teclado) primeros términos de la sucesión de Fibonacci.
+    Nota: la sucesión de Fibonacci se caracteriza por:
+    Primer elemento: 0
+    Segundo elemento: 1
+    Resto elementos: se forman sumando los 2 términos anteriores
+    0,1,1,2,3,5,….*/
+
+        function Fibonacci() {
+            let a = 0;
+            let b = 1;
+            let seguiente;
+            let numeros = parseInt(prompt("Dime un numero"));
+
+            document.write(a + ", " + b + ", ")
+            for (let i = 3; i <= numeros; i++) {
+                siguiente = a + b;
+                document.write(siguiente + ", ")
+                a = b;
+                b = siguiente;
+            }
+
+
+        }
+        Fibonacci();
+
+
+    </script>
+
+</body>
+
+</html>

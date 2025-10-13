@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 33</title>
+</head>
+
+<body>
+
+    <script>
+        /*Hacer una página JavaScript que contenga una función tiempo que
+    recibe 2 parámetros, el tiempo que hizo ayer y el tiempo que hace hoy. Hay 3
+    posibilidades: SOL, NUBLADO, LLUVIA. Y en función del tiempo de ayer y el
+    tiempo de hoy muestre la predicción para mañana. Esta predicción se basa en
+    la siguiente tabla.
+    AYERHOY->MAÑANA
+    ===============================
+    SOLSOL->SOL
+    NUBLADONUBLADO->NUBLADO
+    LLUVIALLUVIA->LLUVIA
+    SOLNUBLADO->NUBLADO
+    NUBLADOSOL->SOL
+    SOLLLUVIA->NUBLADO
+    LLUVIASOL->NUBLADO
+    NUBLADOLLUVIA->LLUVIA
+    LLUVIANUBLADO->NUBLADO*/
+
+        function tiempo(ayer, hoy) {
+            let ayerHoy = ayer + hoy;
+            switch (ayerHoy) {
+                case "SOLSOL":
+                    return "SOL";
+                case "NUBLADONUBLADO":
+                    return "NUBLADO";
+                case "LLUVIALLUVIA":
+                    return "LLUVIA";
+                case "SOLNUBLADO":
+                    return "NUBLADO";
+                case "NUBLADOSOL":
+                    return "SOL";
+                case "SOLLLUVIA":
+                    return "NUBLADO";
+                case "LLUVIASOL":
+                    return "NUBLADO";
+                case "NUBLADOLLUVIA":
+                    return "LLUVIA";
+                case "LLUVIANUBLADO":
+                    return "NUBLADO";
+                default:
+                    return "Dato no válido";
+            }
+
+        }
+
+        let prediccion = tiempo("SOL", "LLUVIA");
+        document.write("<p>La predicción para mañana es: <b>" + prediccion + "</b></p>");
+
+
+
+
+
+    </script>
+</body>
+
+</html>

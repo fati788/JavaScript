@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let n = parseInt(prompt("Dame un numero"));
+    let primer = 0;
+    let segundo = 1;
+    let seguiente
+    document.write(primer + ", " + segundo + ", ");
+    for(let i = 3 ; i<= n ; i++){
+          seguiente = primer + segundo;
+        document.write(seguiente + ", ");
+        primer = segundo;
+        segundo = seguiente;
+       
+    }
+
+    </script>
+</body>
+</html>
