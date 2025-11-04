@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+</head>
+
+<body>
+    <div>
+        <p id="fechaActual"></p>
+    </div>
+    <script>
+        function mostrarFechaActual() {
+            let fecha = new Date();
+            let parafo = document.getElementById("fechaActual");
+            parafo.textContent = "La fecha actual: " + fecha;
+            
+        }
+       setTimeout(mostrarFechaActual(), 20000);
+    </script>
+</body>
+
+</html>

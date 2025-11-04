@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body onload="reloj()">
+  <h1 id="time"></h1>
+    <script>
+        function reloj() {
+            let fecha = new Date();
+            let hora = fecha.getHours();
+            let minuto = fecha.getMinutes();
+            let segundo = fecha.getSeconds();
+
+            if (hora < 10) {
+                hora = "0" + hora;
+            }
+            if (minuto < 10) {
+                minuto = "0" + minuto;
+            }
+            if (segundo < 10) {
+                segundo = "0" + segundo;
+            }
+            
+            document.getElementById("time").innerHTML=`${hora} : ${minuto} : ${segundo} `;
+            //document.getElementById("hora").innerHTML = `${hora} : ${minuto} : ${segundo} `;
+            
+           setTimeout("reloj()",1000);
+        }
+    </script>
+
+</body>
+
+</html>

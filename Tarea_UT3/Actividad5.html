@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <script>
+        let cadena = "fatimazohra:elaoula:642221604:fatima@gmail.com:04536";
+        let palabras = cadena.split(":");
+        let nombre = palabras[0];
+        let apellidos = palabras[1];
+        let telefono = palabras[2];
+        let email = palabras[3];
+        let codPostal = palabras[4];
+
+        document.write("Código postal: " + codPostal);
+        document.write("<br> Apellidos: " + apellidos);
+        document.write("<br> email: " + email);
+        let emails = email.split("@");
+        document.write("<br>El servidor del email: " + emails[1]);
+       
+        
+    </script>
+</body>
+
+</html>

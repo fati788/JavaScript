@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    <script>
+        let numeros = [0,1,2,3,4,5,6,7,8,9,10];
+        let suma = 0; 
+        let aprobados = 0;
+        for(let i= 0; i< numeros.length ; i++){
+            suma += numeros[i];
+            if(numeros[i] >= 5){
+                aprobados ++ ;
+            }
+        }
+        document.write("<b>El Promedio de la clase es:</b> " + (suma/numeros.length));
+      let alta = Math.max(...numeros);
+      let baja = Math.min(...numeros);
+      document.write("<br>Nota más alta:" + alta + " y más baja: " +baja)
+      let porcentajeAprobados = (aprobados/numeros.length) *100;
+       document.write("<br><b>Porcentaje de aprobados:</b> " + porcentajeAprobados.toFixed(1) + "%");
+    </script>
+</body>
+</html>

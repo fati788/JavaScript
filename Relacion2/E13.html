@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    
+    <script>
+        let numeros = [1,7,8,9,0,2,3,4,5,6,8,7,34,2,1];
+        let numerosPares = [];
+        let numerosImpares =[];
+        for(let i= 0 ; i< numeros.length ; i++){
+            if(numeros[i]%2 == 0){
+                numerosPares.push(numeros[i]);
+            }else{
+                numerosImpares.push(numeros[i]);
+            }
+        }
+
+        document.write("<strong>Numeros pares:</strong> ");
+        document.write(numerosPares.join(", "));
+
+        document.write("<br><strong>Numeros Impares:</strong> ");
+        document.write(numerosImpares.join(", "));
+        
+    </script>
+</body>
+</html>

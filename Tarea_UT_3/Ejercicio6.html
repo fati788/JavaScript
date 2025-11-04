@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre"><br>
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" id="edad"><br>
+        <label for="">Aficiones:</label>
+        <select name="aficion" id="aficion">
+             <option value="">-- Selecciona una afición --</option>
+            <option value="informatica">Informática</option>
+            <option value="deportes">Deportes</option>
+            <option value="musica">Musica</option>
+        </select><br>
+        <input type="submit" value="enviar" id="enviar">
+
+    </form>
+   <script>
+    // Cuando se hace clic en el botón
+    document.getElementById("enviar").onclick = function() {
+      let nombre = document.getElementById("nombre").value.trim();
+      let edad = document.getElementById("edad").value;
+      let aficion = document.getElementById("aficion").value;
+
+      // Validaciones simples
+      if (nombre === "") {
+        alert("Por favor, escribe tu nombre.");
+        return;
+      }
+
+      if (edad === "" || edad < 18) {
+        alert("La edad debe ser 18 o más.");
+        return;
+      }
+
+      if (aficion === "") {
+        alert("Selecciona una afición.");
+        return;
+      }
+
+      // Si todo está bien, abrir nueva ventana con los datos
+      let nuevaVentana = window.open("", "_blank", "width=500, height=500");
+      nuevaVentana.document.write("<h2>Datos introducidos</h2>");
+      nuevaVentana.document.write("<p><b>Nombre:</b> " + nombre + "</p>");
+      nuevaVentana.document.write("<p><b>Edad:</b> " + edad + "</p>");
+      nuevaVentana.document.write("<p><b>Afición:</b> " + aficion + "</p>");
+    };
+  </script>
+</body>
+
+</html>

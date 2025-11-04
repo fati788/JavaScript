@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+</head>
+
+<body>
+
+
+    <script>
+        function esPrimo(numero) {
+            if(numero <=1){
+                return false;
+            }
+            for (let i = 2; i < numero; i++) {
+                if (numero % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function esPalindromo(numero) {
+            let str = numero.toString();
+            let revers = str.split('').reverse().join('');
+
+            if (str === revers) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    let cout = 0;
+    let miArray = [];
+    for(let i= 1; i<=100000 ; i++ ){
+        if(esPrimo(i) && esPalindromo(i)){
+            cout++ ;
+            miArray.push(i);
+        }
+    }
+
+    document.write("<b> números son a la vez primos y palíndromos desde el 1 hasta 100000: </b>" +cout);
+    document.write("<br>" + miArray.join(", "));
+        
+    </script>
+</body>
+
+</html>

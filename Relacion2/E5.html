@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <script>
+        let numeros = [1 ,45,67,8,9,90,12,23,34,5];
+        let contPar = 0;
+        let contImpar = 0;
+        for(let i= 0 ; i<numeros.length ; i++){
+            if(numeros[i]%2 == 0){
+                contPar++;
+            }else{
+                contImpar++;
+            }
+        }
+        document.write("Hay " + contPar + " numeros pares");
+        document.write("<br>Hay " + contImpar + " numeros impares");
+    </script>
+</body>
+</html>

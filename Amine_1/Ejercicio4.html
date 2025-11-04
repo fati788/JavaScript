@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <form action="">
+        <label for="nombre">Introduce tu nombre </label>
+        <input type="text" name="nombre" id="nombre"><br>
+        <label for="apellido">Introduce tu apellido</label>
+        <input type="text" name="apellido" id="apellido"><br>
+        <label for="email">Introduce tu email</label>
+        <input type="email" name="email" id="email"><br>
+        <label for="aficion">Introduce tu aficion</label>
+        <select id="aficion">
+            <option value="">--Elige una aficion--</option>
+            <option value="informatica">Informatica</option>
+            <option value="deporte">Deporte</option>
+            <option value="musica">Musica</option>
+        </select><br>
+        <label for="color">Cambiar color de fondo</label>
+        <input type="color" name="color" id="color"><br>
+        <button >Cambiar color</button><br>
+        <input type="submit" value="Enviar datos" onclick="abrirVentana()" >
+        <button>Cancelar</button>
+    </form>
+
+
+    <script>
+        let ventana="";
+        function abrirVentana(){
+         ventana = window.open("" , "Mi ventana" , "width=500 , height=500");
+         let nombre = document.getElementById("nombre").value;
+         let apellido = document.getElementById("apellido").value;
+         let email = document.getElementById("email").value;
+         let aficion = document.getElementById("aficion").value;
+
+         ventana.document.write("<h1>Binevinido a mi web " + nombre + " con apellidos " + apellido + "</h1>");
+         ventana.document.write("Mi email es: " + email + " y mi aficion es: " +aficion);
+
+         let color = document.getElementById("color").value;
+         ventana.document.bgColor = color;
+        }
+    </script>
+</body>
+</html>

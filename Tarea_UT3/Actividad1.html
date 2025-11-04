@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+</head>
+
+<body>
+
+    <script>
+        let letrasIndtroducidas = [];
+        let intervalo;
+
+        function solicitarDNI() {
+
+            let numero = parseInt(prompt("Dame un numero de DNI: "));
+            if (numero === -1) {
+                clearInterval(intervalo);
+                document.write("Los letras de numeros de dni introducidas son: ");
+                document.write(letrasIndtroducidas.join(", "));
+            } else {
+                let letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+                letrasIndtroducidas.push(letras.charAt(numero % 23));
+            }
+
+        }
+        intervalo = setInterval(solicitarDNI, 5000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 14</title>
+</head>
+<body>
+  <script>
+    let numeros =[1,2,3,4,5,6,45];
+    let minimo = Math.min(...numeros);
+    let maximo = Math.max(...numeros);
+     let suma = 0;
+    for(let i= 0 ; i<numeros.length ; i++){
+      if((numeros[i] != minimo) && (numeros[i] != maximo)){
+        suma += numeros[i];
+      }
+    }
+    document.write("<b>a media de los valores del array excluyendo el mayor y el menor es: </b>");
+    document.write(suma/(numeros.length-2));
+    
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banners</title>
+    <style>
+        img {
+            width: 400px;
+            height: 400px;
+
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <img id="banner" src="imgs/img1.png" alt="">
+    </div>
+
+    <script>
+        let numero = 1;
+        function banner() {
+            let imagee = document.getElementById("banner");
+            imagee.src = "imgs/img" + numero + ".png";
+            numero++;
+            if (numero > 4) {
+                numero = 1;
+            }
+            setTimeout("banner()",1000);
+        }
+        
+        banner();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        let numero;
+      
+         let letrasIndtroducidas = [];
+         let interval = setInterval(() => {
+            let numero = parseInt(prompt("Dame un numero: "));
+            if(numero === -1){
+                clearInterval(interval);
+                document.write("Los letras de todos los DNIs introducidos son: <br>");
+                document.write(letrasIndtroducidas.join(", "));
+            }else{
+                let letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+                let numLetra = numero % 23;
+                letrasIndtroducidas.push(letras.charAt(numLetra));
+            }
+         },20000);
+
+      
+    </script>
+</body>
+</html>

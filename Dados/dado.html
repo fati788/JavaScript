@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        img {
+            border-radius: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="imgs/dado01.png" alt="" id="dado"><br>
+        <button value="Lanzar dado" onclick="lanzarDado()">Lanzar dado</button>
+        <audio src="sonidos/dado.mp3" id="audio"></audio>
+    </div>
+    <script>
+        let dado = document.getElementById("dado");
+        function lanzarDado() {
+            let numero = Math.floor(Math.random() * 6) + 1;
+            let audio = document.getElementById("audio");
+            dado.src = "imgs/dado0" + numero + ".png";
+            audio.play();
+        }
+    </script>
+</body>
+</html>
