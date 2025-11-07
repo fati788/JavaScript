@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="abrirVentana()">Abrir ventana</button>
+    <br>
+    <button onclick="cerrarVentana()">Cerrar ventana</button>
+    <script>
+    let ventana = "";
+    function abrirVentana(){
+        ventana = window.open("" , "mi ventana" , "width = 200 , height=100");
+
+    }
+    function cerrarVentana(){
+        ventana.close();
+    }
+    </script>
+</body>
+</html>

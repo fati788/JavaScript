@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulario de Contacto</h2>
+
+    <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <label for="pais">País:</label>
+        <select id="pais" name="pais">
+            <option value="">Seleccione...</option>
+            <option value="mexico">México</option>
+            <option value="argentina">Argentina</option>
+            <option value="chile">Chile</option>
+            <option value="espana">España</option>
+        </select>
+
+        <div class="botones">
+            <button type="submit" class="enviar">Enviar</button>
+            <button type="reset" class="borrar">Borrar</button>
+            <button type="button" class="imprimir" onclick="imprimirFormulario()">Imprimir</button>
+        </div>
+    </form>
+    <script>
+        function imprimirFormulario(){
+            window.print();
+        }
+    </script>
+</body>
+
+</html>

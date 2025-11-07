@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con botón Imprimir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .enviar {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .borrar {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .imprimir {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Ocultar los botones al imprimir */
+        @media print {
+            .botones {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Formulario de Contacto</h2>
+
+    <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <label for="pais">País:</label>
+        <select id="pais" name="pais">
+            <option value="">Seleccione...</option>
+            <option value="mexico">México</option>
+            <option value="argentina">Argentina</option>
+            <option value="chile">Chile</option>
+            <option value="espana">España</option>
+        </select>
+
+        <div class="botones">
+            <button type="submit" class="enviar">Enviar</button>
+            <button type="reset" class="borrar">Borrar</button>
+            <button type="button" class="imprimir" onclick="imprimirFormulario()">Imprimir</button>
+        </div>
+    </form>
+
+    <script>
+        // Función para imprimir el formulario
+        function imprimirFormulario() {
+            window.print();
+        }
+    </script>
+
+</body>
+</html>

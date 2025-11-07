@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function dia(numero) {
+            switch (numero) {
+                case 0:
+                    document.write("Dom");
+                    break;
+                case 1:
+                    document.write("Lun");
+                    break;
+                case 2:
+                    document.write("Mar");
+                    break;
+                case 3:
+                    document.write("Mie");
+                    break;
+                case 4:
+                    document.write("Jue");
+                    break;
+                case 5:
+                    document.write("Vie");
+                    break;
+                case 6:
+                    document.write("Sab");
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        let fecha = new Date();
+        dia(fecha.getDay());
+    </script>
+</body>
+
+</html>

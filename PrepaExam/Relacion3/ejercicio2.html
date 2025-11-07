@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+        }
+
+        .verde {
+            background-color: green;
+        }
+
+        .amarillo {
+            background-color: yellow;
+        }
+
+        .azul {
+            background-color: blue;
+        }
+
+        .negro {
+            background-color: black;
+        }
+
+        .rojo {
+            background-color: red;
+        }
+        .content{
+           display: flex;
+           gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="content">
+    <div id="red" class="rojo" onmouseover="color(this)" onmouseout="sinColo()"></div>
+    <div id="green" class="verde"  onmouseover="color(this)" onmouseout="sinColo()"></div>
+    <div id="yellow" class="amarillo"  onmouseover="color(this)" onmouseout="sinColo()"></div>
+    <div id="blue" class="azul"  onmouseover="color(this)" onmouseout="sinColo()"></div>
+    <div id="black" class="negro"  onmouseover="color(this)" onmouseout="sinColo()"></div>
+    </section>
+</body>
+<script>
+    function color(ele){
+        document.bgColor = ele.id;
+    }
+    function sinColo(){
+        document.bgColor = "white";
+    }
+</script>
+
+</html>

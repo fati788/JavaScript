@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mes(numero) {
+            switch (numero) {
+                case 0:
+                    document.write("Enero");
+                    break;
+                case 1:
+                    document.write("Febrero");
+                    break;
+                case 2:
+                    document.write("Marzo");
+                    break;
+                case 3:
+                    document.write("Abril");
+                    break;
+                case 4:
+                    document.write("May");
+                    break;
+                case 5:
+                    document.write("junio");
+                    break;
+                case 6:
+                    document.write("julio");
+                    break;
+                case 7:
+                    document.write("agusto");
+                    break;
+                case 8:
+                    document.write("septiembre");
+                    break;
+                case 9:
+                    document.write("octubre");
+                    break;
+                case 10:
+                    document.write("Noviembre");
+                    break;
+                case 11:
+                    document.write("Diciembre");
+                    break;
+
+
+
+                default:
+                    break;
+            }
+        }
+        let fecha = new Date();
+        mes(fecha.getMonth());
+    </script>
+</body>
+
+</html>

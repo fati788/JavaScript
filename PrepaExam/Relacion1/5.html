@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function numeros(n1 , n2 , n3 , n4){
+            let numeros = [n1 , n2 , n3 , n4];
+            let max = Math.max(...numeros);
+            let min = Math.min(...numeros);
+            document.write("Max: " +max);
+            document.write("<br> Min: " + min);
+
+        }
+        numeros(1,2,3,4);
+    </script>
+</body>
+</html>

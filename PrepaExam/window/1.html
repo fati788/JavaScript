@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" id="apellidos">
+        <br>
+         <input type="button" value="Abrir ventana" onclick="abrirVentana()">
+
+    </form>
+    <script>
+      let ventana = "";
+      function abrirVentana(){
+        let nombre = document.getElementById("nombre").value;
+        let apellidos = document.getElementById("apellidos").value;
+        ventana = window.open("" , "Mi Ventana" , "width=500 , height=500");
+        ventana.document.write("<h1>Bienvinido"+nombre + " con apellidos " + apellidos + " </h1>");
+      }
+    </script>
+</body>
+
+</html>
